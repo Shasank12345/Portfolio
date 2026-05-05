@@ -90,7 +90,18 @@ export const milestones = [
       "Modeled databases and maintained version control (Git)",
       "Integrated frontend with React"
     ]
-  }
+
+  },
+  {
+  title: "Participant, Global Hackathon",
+  organization: "Harvard Health Systems Innovation Lab (HSIL)",
+  date: "April 2026",
+  description: [
+    "Participated in the global health systems innovation event.",
+    "Validated technical triage logic and project implementation."
+  ],
+  certificateUrl: "https://drive.google.com/file/d/1ggwnh-ZNPw0nC-yThGv_IzbluBBaCoUk/view?usp=drive_link"
+}
 ];
 
 
