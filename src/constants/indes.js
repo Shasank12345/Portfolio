@@ -27,81 +27,47 @@ import {
 } from "../assets/icons";
 
 export const skills = [
-    {
-        imageUrl: css,
-        name: "CSS",
-        type: "Frontend",
-    },
-    {
-        imageUrl: git,
-        name: "Git",
-        type: "Version Control",
-    },
-    {
-        imageUrl: github,
-        name: "GitHub",
-        type: "Version Control",
-    },
-    {
-        imageUrl: html,
-        name: "HTML",
-        type: "Frontend",
-    },
-    {
-        imageUrl: react,
-        name: "React",
-        type: "Frontend",
-    },
-    {
-        imageUrl: tailwindcss,
-        name: "Tailwind CSS",
-        type: "Frontend",
-    },
+    // --- Data Science & AI (Main Focus) ---
+    { imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", name: "Python", type: "Main" },
+    { imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg", name: "NumPy", type: "Main" },
+    { imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg", name: "Pandas", type: "Main" },
+    { imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg", name: "AI/ML", type: "Main" },
+    
+    // --- Frontend & Web ---
+    { imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", name: "React", type: "Frontend" },
+    { imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", name: "Tailwind CSS", type: "Frontend" },
+    { imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", name: "HTML", type: "Frontend" },
+    { imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", name: "CSS", type: "Frontend" },
+    
+    // --- Systems & Version Control ---
+    { imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg", name: "C", type: "Systems" },
+    { imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", name: "C++", type: "Systems" },
+    { imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", name: "Git", type: "Version Control" },
+    { imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", name: "GitHub", type: "Version Control" },
 ];
-
 export const milestones = [
   {
-    title: "Academic Project Developer",
+    title: "Full-Stack Developer",
     period: "2024–Present",
-    description: "Led develoapment of real-world inspired university projects",
+    description: "Architected and deployed data-driven web and desktop applications to solve real-world operational challenges.",
     points: [
-      "Developed RouteHive transport management system using React, Flask, and Leaflet",
-      "Implemented OTP-based email verification and password reset system",
-      "Built enrollment management with admin approval and automated email notifications",
-      "Simulated bus and user live-location tracking on a map"
+      "Vital Sync: Engineered a high-speed data pipeline for automated trauma triage, utilizing AI to structure field notes into ER telemetry.",
+      "Route Hive: Built a bus operations platform with real-time map integration, automated scheduling, and secure user authentication.",
+      "CuraMind: Developed a telemedicine triage tool that automates clinical routing for injury assessment using standardized medical logic.",
+      "Faculty Management: Created a native C++ desktop application with Qt to streamline internal faculty data and workflow management."
     ]
   },
   {
-    title: "Independent Developer",
-    period: "2023–Present",
-    description: "Executed self-driven software projects to strengthen practical skills",
+    title: "Healthcare Systems Innovator",
+    organization: "Harvard Health Systems Innovation Lab (HSIL)",
+    period: "April 2026",
+    description: "Participated in a global hackathon focused on clinical technology and patient care innovation.",
     points: [
-      "Built a 3D interactive portfolio using React Three Fiber",
-      "Designed reusable UI components, custom animations, and form handling",
-      "Integrated EmailJS for contact messaging"
+      "Collaborated in a high-pressure, cross-functional environment to prototype clinical triage workflows.",
+      "Validated the technical integration of medical decision logic (Ottawa Ankle Rules) within a triage application.",
+      "Certification: [View Certificate](https://drive.google.com/file/d/1ggwnh-ZNPw0nC-yThGv_IzbluBBaCoUk/view?usp=drive_link)"
     ]
-  },
-  {
-    title: "Team Project Contributor",
-    period: "University Group Work",
-    description: "Collaborated in teams of 5–6 members to deliver software projects",
-    points: [
-      "Handled backend logic and API structure",
-      "Modeled databases and maintained version control (Git)",
-      "Integrated frontend with React"
-    ]
-
-  },
-  {
-  title: "Participant, Global Hackathon",
-  organization: "Harvard Health Systems Innovation Lab (HSIL)",
-  date: "April 2026",
-  description: [
-    "Participated in the global health systems innovation event.",
-    "Validated technical triage logic and project implementation."
-  ],
-  certificateUrl: "https://drive.google.com/file/d/1ggwnh-ZNPw0nC-yThGv_IzbluBBaCoUk/view?usp=drive_link"
-}
+  }
 ];
 
 
@@ -109,44 +75,54 @@ export const milestones = [
 export const socialLinks = [
     {
         name: 'Contact',
-        iconUrl: contact,
         link: '/contact',
     },
     {
         name: 'GitHub',
-        iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
+        link: 'https://github.com/Shasank12345',
     },
     {
         name: 'LinkedIn',
-        iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg',
+        link: 'https://www.linkedin.com/in/shasank-singh-thakuri-b53267346/',
     }
 ];
-
 export const projects = [
     {
+        name: "Vital Sync: Trauma Triage Automation",
+        description: "Engineered a high-speed data pipeline transforming unstructured field notes into structured ER telemetry. Implemented AI for real-time acuity scoring, reducing triage data entry latency.",
+        tags: ["React", "FastAPI", "AI", "Data Pipelines"],
+        repo: null,
+        live: "https://app-bp72q5c4r0n5.appmedo.com/",
+        icon: "🚑",
+        date: "June 2026"
+    },
+    {
         name: "Route Hive: Bus Operations Optimizer",
-        description: "A web-based platform designed to digitize and optimize university bus operations, enhancing punctuality, communication, and transparency. Features include online enrollment, automated route assignment, and simulated bus tracking with map integration.",
+        description: "Digitized university bus logistics with automated route assignment and real-time mapping. Reduced student wait times through efficient scheduling algorithms.",
         tags: ["React.js", "Flask", "SQLite", "Leaflet.js"],
-        link: "https://github.com/Shasank12345/ROUTE_HIVE",
+        repo: "https://github.com/Shasank12345/ROUTE_HIVE",
+        live: null,
         icon: "🚌",
-        date: "May 2025 - Present" 
+        date: "May 2025 - August 2025"
     },
     {
-        name: "CuraMind: Mental Health Chatbot Prototype",
-        description: "Full-stack prototype for an initial mental health resource. It allows users to check symptoms via a smart chatbot and connects them with medical professionals, focusing on robust authentication and complex multi-module integration.",
-        tags: ["Python/Flask", "Chatbot Logic", "Authentication", "Database Design"],
-        link: "https://github.com/Shasank12345/QT_PROJECT", 
+        name: "CuraMind: AI Telemedicine Triage",
+        description: "Automated clinical routing for musculoskeletal injuries using the Ottawa Ankle Rules. Streamlines patient intake and prioritizes specialist consultations through an AI-driven interface.",
+        tags: ["Python", "Flask", "NLP", "SQLAlchemy"],
+        repo: "https://github.com/Shasank12345/CURA_MIND",
+        live: null,
         icon: "🧠",
-        date: "Recent Prototype (2 Weeks Ago - Present)" 
+        date: "Dec 2025 - Feb 2026"
     },
     {
-        name: "Faculty Management System (Desktop)",
-        description: "A desktop application built using C++ and the Qt framework for faculty to streamline internal interactions and management processes. This project focuses on native application development and efficient system design.",
-        tags: ["C++", "Qt Framework", "Desktop App", "System Design"],
-        link: "https://github.com/Shasank12345/QT_PROJECT", 
+        name: "Faculty Management System",
+        description: "Native C++ desktop application built with Qt to streamline internal faculty workflows, interaction, and data management.",
+        tags: ["C++", "Qt Framework", "Desktop App"],
+        repo: "https://github.com/Shasank12345/QT_PROJECT",
+        live: null,
         icon: "🖥️",
-        date: "Late 2024 - Early 2025" 
+        date: "Late 2024 - Early 2025"
     },
 ];

@@ -6,159 +6,88 @@ import CTA from '../components/CTA.jsx';
 const GLASS_TITLE_TEXT = "text-gray-900 font-extrabold";
 const GLASS_BODY_TEXT = "text-gray-700";
 
-const TimelineItem = ({ title, organization, date, description, certificateUrl, index }) => {
-  const isLeft = index % 2 === 0;
-
-  const renderDescription = () => {
-    if (Array.isArray(description)) {
-      return (
-        <ul className={`${GLASS_BODY_TEXT} mt-2 list-disc ml-5 space-y-1 text-justify`}>
-          {description.map((item, i) => (
-            <li key={i} className="text-xs md:text-sm leading-snug">{item}</li>
-          ))}
-        </ul>
-      );
-    }
-    return <p className={`${GLASS_BODY_TEXT} mt-2 whitespace-pre-line text-justify text-xs md:text-sm leading-snug`}>{description}</p>;
-  };
-
-  return (
-    <div className="relative w-full mb-12 flex flex-col md:flex-row"> 
-      <div className="absolute left-4 md:left-1/2 top-0 w-0.5 bg-gradient-to-b from-blue-400 via-blue-500 to-blue-600 h-full transform md:-translate-x-1/2 rounded-full" />
-
-      <motion.div
-        className="absolute left-4 md:left-1/2 w-4 h-4 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full transform md:-translate-x-1/2 z-10 shadow-lg border-2 border-gray-900"
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        whileHover={{ scale: 1.2 }}
-        transition={{ duration: 0.3 }}
-      />
-
-      <div
-        className={`hidden md:flex w-1/2 ${
-          isLeft 
-            ? 'justify-end pr-6 text-right'
-            : 'justify-start pl-6 text-left ml-auto'
-        }`}
-      >
-        <motion.div
-          initial={{ opacity: 0, x: isLeft ? -50 : 50, scale: 0.95 }}
-          whileInView={{ opacity: 1, x: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.7, delay: index * 0.1 }}
-          className="bg-white/5 backdrop-blur-xl border border-white/20 p-5 rounded-lg shadow-xl hover:scale-[1.02] transition-all duration-300 max-w-sm"
-        >
-          <h3 className={`text-lg ${GLASS_TITLE_TEXT}`}>{title}</h3>
-          <p className="text-xs text-blue-500 mt-0.5 italic">{organization}</p>
-          <p className="text-xs text-gray-500 mt-0.5 font-mono">{date}</p>
-          {description && renderDescription()}
-          {certificateUrl && (
-            <div className="mt-4 pt-3 border-t border-gray-200/20">
-              <a
-                href={certificateUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-xs font-semibold text-blue-600 hover:text-pink-600 transition-colors duration-200"
-              >
-                View Certificate →
-              </a>
-            </div>
-          )}
-        </motion.div>
-      </div>
-
-      <div className="md:hidden w-full pl-10">
-        <motion.div
-          initial={{ opacity: 0, x: -20, scale: 0.95 }}
-          whileInView={{ opacity: 1, x: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, delay: index * 0.05 }}
-          className="bg-white/5 backdrop-blur-xl border border-white/20 p-4 rounded-lg shadow-lg mb-4 hover:scale-[1.01] transition-all duration-300"
-        >
-          <h3 className={`text-base ${GLASS_TITLE_TEXT}`}>{title}</h3>
-          <p className="text-xs text-blue-500 mt-0.5 italic">{organization}</p>
-          <p className="text-xs text-gray-500 mt-0.5 font-mono">{date}</p>
-          {description && renderDescription()}
-          {certificateUrl && (
-            <div className="mt-4 pt-3 border-t border-gray-200/20">
-              <a
-                href={certificateUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-xs font-semibold text-blue-600 hover:text-pink-600 transition-colors duration-200"
-              >
-                View Certificate →
-              </a>
-            </div>
-          )}
-        </motion.div>
-      </div>
-    </div>
-  );
-};
-
 const About = () => {
   return (
-    <section className="min-h-screen py-16 bg-[radial-gradient(ellipse_at_top,_var(--tw-color-gray-900)_30%,_var(--tw-color-indigo-900)_100%)] text-white"> 
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-12"> 
-        <div className="bg-white/5 backdrop-blur-xl border border-white/20 p-6 md:p-8 rounded-xl shadow-2xl hover:shadow-indigo-500/30 transition-shadow duration-500 text-center">
-          <h1 className="head-text text-3xl md:text-5xl font-extrabold text-center">
-            <span className={GLASS_TITLE_TEXT}>
-              Hello, I am{' '}
-            </span>
-            <span className="font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-pink-600">
-              SHASANK SINGH THAKURI
-            </span>
+    <section className="min-h-screen py-20 bg-[radial-gradient(ellipse_at_top,_var(--tw-color-gray-900)_20%,_var(--tw-color-indigo-950)_100%)] text-white relative overflow-hidden">
+      <div className="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/black-linen.png')] pointer-events-none" />
+
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-16 relative z-10">
+        
+        {/* Header Section (Matching Projects Header) */}
+        <div className="bg-white/15 backdrop-blur-lg border border-white/20 p-8 md:p-10 rounded-3xl shadow-2xl shadow-indigo-900/50 text-center max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-black mb-4 leading-tight">
+            <span className={GLASS_TITLE_TEXT}>Hello, I am </span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-pink-600">SHASANK</span>
           </h1>
-          <p className={`mt-4 ${GLASS_BODY_TEXT} max-w-3xl text-sm md:text-lg text-center leading-relaxed mx-auto`}>
-            Computer Engineer based in Nepal, passionate about hands-on learning and creating
-            practical applications to enhance technical education.
+          <p className={`mt-4 ${GLASS_BODY_TEXT} text-lg leading-relaxed max-w-2xl mx-auto font-medium`}>
+            Computer Engineer passionate about Data Science, AI/ML, and building scalable full-stack systems.
           </p>
         </div>
 
-        <div className="bg-white/5 backdrop-blur-xl border border-white/20 p-6 md:p-8 rounded-xl shadow-2xl hover:shadow-pink-500/30 transition-shadow duration-500">
-          <h3 className={`subhead-text text-2xl md:text-3xl mb-10 text-center ${GLASS_TITLE_TEXT}`}>
-            My Skills
-          </h3>
-          <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-5 justify-items-center"> 
+        {/* Technical Stack */}
+        <div className="bg-white/15 backdrop-blur-lg border border-white/20 p-8 rounded-3xl shadow-2xl">
+          <h3 className={`text-2xl font-bold mb-10 text-center ${GLASS_TITLE_TEXT}`}>Technical Stack</h3>
+          <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-4 justify-items-center">
             {skills.map((skill, idx) => (
               <motion.div
                 key={idx}
-                whileHover={{ scale: 1.1 }}
-                className="relative w-16 h-16 group cursor-pointer"
+                whileHover={{ scale: 1.15, y: -5 }}
+                className={`relative w-16 h-16 group cursor-pointer p-3 rounded-xl border backdrop-blur-md transition-all duration-300
+                  ${skill.type === "Main"
+                    ? "bg-blue-600/20 border-blue-500/50 shadow-[0_0_15px_rgba(59,130,246,0.3)]"
+                    : "bg-white/10 border-white/20 hover:border-white/40"
+                  }`}
               >
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-1.5 py-0.5 bg-blue-600 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-20">
+                <div className="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-gray-900 text-white text-xs font-semibold rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 border border-white/10">
                   {skill.name}
                 </div>
-                <div className="relative bg-white/10 border border-white/30 rounded-lg flex justify-center items-center w-full h-full shadow-lg backdrop-blur-sm">
-                  <img
-                    src={skill.imageUrl}
-                    alt={skill.name}
-                    className="w-10 h-10 object-contain"
-                  />
+                <img src={skill.imageUrl} alt={skill.name} className="w-full h-full object-contain" />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Experience Timeline */}
+        <div className="space-y-10">
+          <h3 className={`text-3xl font-extrabold text-center ${GLASS_TITLE_TEXT}`}>Experience & Growth</h3>
+          
+          <div className="relative border-l-2 border-white/20 ml-3 md:ml-6 space-y-12">
+            {milestones.map((milestone, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                className="relative pl-8 group"
+              >
+                <div className="absolute -left-[9px] top-0 w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900 shadow-[0_0_15px_rgba(59,130,246,0.8)]" />
+                
+                <div className="bg-white/15 backdrop-blur-lg border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-all duration-300 shadow-xl">
+                  <h3 className={`text-xl ${GLASS_TITLE_TEXT}`}>{milestone.title}</h3>
+                  {milestone.organization && <p className="text-sm font-bold text-blue-700">{milestone.organization}</p>}
+                  <p className="text-xs font-mono text-gray-600 mb-4">{milestone.period || milestone.date}</p>
+                  
+                  <div className={`${GLASS_BODY_TEXT} text-sm opacity-90`}>
+                    <p className="mb-3 font-medium italic">{milestone.description}</p>
+                    <ul className="list-disc ml-4 space-y-2">
+                      {milestone.points.map((point, i) => {
+                        if (point.includes("[View Certificate]")) {
+                            return <li key={i} dangerouslySetInnerHTML={{ __html: point.replace(/\[View Certificate\]\((.*?)\)/, '<a href="$1" target="_blank" class="text-blue-700 font-bold hover:text-pink-600 underline">View Certificate &rarr;</a>') }} />;
+                        }
+                        return <li key={i}>{point}</li>;
+                      })}
+                    </ul>
+                  </div>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
 
-        <div className="bg-white/5 backdrop-blur-xl border border-white/20 p-6 md:p-8 rounded-xl shadow-2xl hover:shadow-blue-500/30 transition-shadow duration-500">
-          <h3 className={`subhead-text text-2xl md:text-3xl mb-12 text-center ${GLASS_TITLE_TEXT}`}>
-            Learning & Achievements
-          </h3>
-          <div className="relative">
-            {milestones.map((milestone, idx) => (
-              <TimelineItem key={idx} index={idx} {...milestone} />
-            ))}
-          </div>
+        <div className="mt-20">
+          <hr className="border-white/20 mb-10" />
+          <CTA />
         </div>
       </div>
-      
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 mt-16 mb-8">
-        <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent" />
-      </div>
-      
-      <CTA/>
     </section>
   );
 };
