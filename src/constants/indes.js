@@ -66,7 +66,6 @@ export const milestones = [
     description: "Participated in a global hackathon focused on clinical technology and patient care innovation.",
     points: [
       "Collaborated in a high-pressure, cross-functional environment to prototype clinical triage workflows.",
-      "Validated the technical integration of medical decision logic (Ottawa Ankle Rules) within a triage application.",
       "Certification: [View Certificate](https://drive.google.com/file/d/1ggwnh-ZNPw0nC-yThGv_IzbluBBaCoUk/view?usp=drive_link)"
     ]
   }
