@@ -13,7 +13,7 @@ const About = () => {
 
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-16 relative z-10">
         
-        {/* Header Section (Matching Projects Header) */}
+        {/* Header Section */}
         <div className="bg-white/15 backdrop-blur-lg border border-white/20 p-8 md:p-10 rounded-3xl shadow-2xl shadow-indigo-900/50 text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-black mb-4 leading-tight">
             <span className={GLASS_TITLE_TEXT}>Hello, I am </span>
