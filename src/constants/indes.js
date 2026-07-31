@@ -66,9 +66,20 @@ export const milestones = [
     description: "Participated in a global hackathon focused on clinical technology and patient care innovation.",
     points: [
       "Collaborated in a high-pressure, cross-functional environment to prototype clinical triage workflows.",
-      "Certification: [View Certificate](https://drive.google.com/file/d/1ggwnh-ZNPw0nC-yThGv_IzbluBBaCoUk/view?usp=drive_link)"
+      "Certification:   [View Certificate](https://drive.google.com/file/d/1ggwnh-ZNPw0nC-yThGv_IzbluBBaCoUk/view?usp=drive_link)"
     ]
-  }
+  },
+  {
+  title: "Data Analytics with AI Workshop",
+  organization: "DLYTICA Academy",
+  date: "July 2026",
+  description: "Completed an intensive live online workshop covering core data analytics workflows integrated with AI tools.",
+  points: [
+    "Earned 3 credit hours covering foundational and applied data analytics techniques.",
+    "Certificate ID: DLYWS-066-2026",
+    "Certification:   [View Certificate](https://drive.google.com/file/d/1-TYKgThsnbg7olLeNJQjOuz0Ih7CetdX/view?usp=drive_link)"
+  ]
+}
 ];
 
 
