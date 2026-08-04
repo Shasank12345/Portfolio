@@ -23,7 +23,7 @@ const About = () => {
             Computer Engineer passionate about Data Science, AI/ML, and building scalable full-stack systems.
           </p>
           <a
-            href="https://drive.google.com/file/d/1OHYkFU1_biJOUdQCzIuVLfNaW4NUZWlC/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1jMbg36KDoLxltHjCAGelSAJ8HyEn1Jbx/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-white bg-gradient-to-r from-blue-600 to-pink-600 hover:opacity-90 transition-all duration-300 shadow-lg shadow-indigo-900/40">
